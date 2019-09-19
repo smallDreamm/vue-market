@@ -14,9 +14,4 @@ new Vue({
   template: '<App/>'
 })
 
-new Vue({
-  el:"#root",
-  data:{
-    msg:"hello world"
-  }
-})
+
