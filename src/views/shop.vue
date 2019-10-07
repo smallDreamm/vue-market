@@ -13,114 +13,207 @@
 				</div>
 				<!--轮播图-->
 				<div class="carousel-wrap" id="carousel">
-				    <!-- <transition-group tag="ul" class='slide-ul' name="list">
+				    <transition-group tag="ul" class='slide-ul' name="list">
 				        <li v-for="(list,index) in slideList" :key="index" v-show="index===currentIndex" @mouseenter="stop" @mouseleave="go">
 				            <a :href="list.clickUrl" >
 				                <img :src="list.image" :alt="list.desc">
 				            </a>
 				        </li>
-				    </transition-group> -->
+				    </transition-group>
 				    <div class="carousel-items">
 				        <!-- <span v-for="(item,index) in slideList.length" :class="{'active':index===currentIndex}" @mouseover="change(index)"></span> -->
 				    </div>
 				</div>
 				<!--手机配件-->
 				<div class="gray-box">
-					<header class="title-header">
-						<h5 class="title">热门店铺</h5>
-					</header>
+					<!-- <header class="title-header">
+						<h5 class="title">热门商品</h5>
+					</header> -->
 					<div class="item-box">
 						<div class="item">
 							<div>
-								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="../assets/img/炸鸡.jpg" style="opacity: 1;">
+								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="http://image.smartisanos.cn/resource/ae40a16324658c192c7361d829f603bd.jpg?x-oss-process=image/resize,w_206/quality,Q_80/format,webp" style="opacity: 1;">
 								</div>
-								<h6>EFC韩国炸鸡披萨</h6>
-								<h3 >鸡排味道不错，值得一试，挺好吃的</h3>
+								<h6>Smartisan 快充移动电源 10000mAh</h6>
+								<h3 >10000mAh 双向快充、轻盈便携、高标准安全保护</h3>
+								<div class="params-colors">
+									<ul class="colors-list">
+										<li><a href="javascript:;" class="active"><img src="http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg"></a></li>
+									</ul>
+								</div>
 								<div class="item-btns clearfix">
-									<span class="item-blue-btn">进店看看 </span>
+									<span class="item-gray-btn"><a href="javascript:;" target="_blank">查看详情</a> </span><span class="item-blue-btn">加入购物车 </span>
 								</div>
 								<div class="item-price clearfix">
-									<i>月售</i><span>596</span>
+									<i>¥</i><span>199.00</span>
 								</div>
-								<!-- <div class="discount-icon">false</div>
+								<div class="discount-icon">false</div>
 								<div class="item-cover">
 									<a href="javascript:;" target="_blank"></a>
-								</div> -->
+								</div>
 							</div>
 						</div>
-                        <div class="item">
-							<div>
-								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="../assets/img/杨国福.jpg" style="opacity: 1;">
-								</div>
-								<h6>杨国福麻辣烫</h6>
-								<h3 >杨国福麻辣烫的汤底很不错</h3>
-								<div class="item-btns clearfix">
-									<span class="item-blue-btn">进店看看 </span>
-								</div>
-								<div class="item-price clearfix">
-									<i>月售</i><span>1056</span>
-								</div>
-								<!-- <div class="discount-icon">false</div>
-								<div class="item-cover">
-									<a href="javascript:;" target="_blank"></a>
-								</div> -->
-							</div>
-						</div>
-                        <div class="item">
+						<div class="item">
 							<div>
 								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="http://image.smartisanos.cn/resource/ae40a16324658c192c7361d829f603bd.jpg?x-oss-process=image/resize,w_206/quality,Q_80/format,webp" style="opacity: 1;">
 								</div>
-								<h6>鑫生生手工水饺</h6>
-								<h3 >鱼饺非常棒的存在</h3>
+								<h6>Smartisan 快充移动电源 10000mAh</h6>
+								<h3 >10000mAh 双向快充、轻盈便携、高标准安全保护</h3>
+								<div class="params-colors">
+									<ul class="colors-list">
+										<li><a href="javascript:;" class="active"><img src="http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg"></a></li>
+									</ul>
+								</div>
 								<div class="item-btns clearfix">
-									<span class="item-blue-btn">进店看看 </span>
+									<span class="item-gray-btn"><a href="javascript:;" target="_blank">查看详情</a> </span><span class="item-blue-btn">加入购物车 </span>
 								</div>
 								<div class="item-price clearfix">
-									<i>月售</i><span>726</span>
+									<i>¥</i><span>199.00</span>
 								</div>
-								<!-- <div class="discount-icon">false</div>
+								<div class="discount-icon">false</div>
 								<div class="item-cover">
 									<a href="javascript:;" target="_blank"></a>
-								</div> -->
+								</div>
 							</div>
 						</div>
-                        		<div class="item">
+						<div class="item">
 							<div>
 								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="http://image.smartisanos.cn/resource/ae40a16324658c192c7361d829f603bd.jpg?x-oss-process=image/resize,w_206/quality,Q_80/format,webp" style="opacity: 1;">
 								</div>
-								<h6>爆走花甲</h6>
-								<h3 >他们家的花甲很入味</h3>
+								<h6>Smartisan 快充移动电源 10000mAh</h6>
+								<h3 >10000mAh 双向快充、轻盈便携、高标准安全保护</h3>
+								<div class="params-colors">
+									<ul class="colors-list">
+										<li><a href="javascript:;" class="active"><img src="http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg"></a></li>
+									</ul>
+								</div>
 								<div class="item-btns clearfix">
-									<span class="item-blue-btn">进店看看 </span>
+									<span class="item-gray-btn"><a href="javascript:;" target="_blank">查看详情</a> </span><span class="item-blue-btn">加入购物车 </span>
 								</div>
 								<div class="item-price clearfix">
-									<i>月售</i><span>987</span>
+									<i>¥</i><span>199.00</span>
 								</div>
-								<!-- <div class="discount-icon">false</div>
+								<div class="discount-icon">false</div>
 								<div class="item-cover">
 									<a href="javascript:;" target="_blank"></a>
-								</div> -->
+								</div>
 							</div>
 						</div>
-                        		<div class="item">
+						<div class="item">
 							<div>
 								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="http://image.smartisanos.cn/resource/ae40a16324658c192c7361d829f603bd.jpg?x-oss-process=image/resize,w_206/quality,Q_80/format,webp" style="opacity: 1;">
 								</div>
-								<h6>卡路里先生(低卡健身餐)</h6>
-								<h3 >有黑米饭的超级好吃</h3>
+								<h6>Smartisan 快充移动电源 10000mAh</h6>
+								<h3 >10000mAh 双向快充、轻盈便携、高标准安全保护</h3>
+								<div class="params-colors">
+									<ul class="colors-list">
+										<li><a href="javascript:;" class="active"><img src="http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg"></a></li>
+									</ul>
+								</div>
 								<div class="item-btns clearfix">
-									<span class="item-blue-btn">进店看看 </span>
+									<span class="item-gray-btn"><a href="javascript:;" target="_blank">查看详情</a> </span><span class="item-blue-btn">加入购物车 </span>
 								</div>
 								<div class="item-price clearfix">
-									<i>月售</i><span>5820</span>
+									<i>¥</i><span>199.00</span>
 								</div>
-								<!-- <div class="discount-icon">false</div>
+								<div class="discount-icon">false</div>
 								<div class="item-cover">
 									<a href="javascript:;" target="_blank"></a>
-								</div> -->
+								</div>
 							</div>
 						</div>
-
+						<div class="item">
+							<div>
+								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="http://image.smartisanos.cn/resource/ae40a16324658c192c7361d829f603bd.jpg?x-oss-process=image/resize,w_206/quality,Q_80/format,webp" style="opacity: 1;">
+								</div>
+								<h6>Smartisan 快充移动电源 10000mAh</h6>
+								<h3 >10000mAh 双向快充、轻盈便携、高标准安全保护</h3>
+								<div class="params-colors">
+									<ul class="colors-list">
+										<li><a href="javascript:;" class="active"><img src="http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg"></a></li>
+									</ul>
+								</div>
+								<div class="item-btns clearfix">
+									<span class="item-gray-btn"><a href="javascript:;" target="_blank">查看详情</a> </span><span class="item-blue-btn">加入购物车 </span>
+								</div>
+								<div class="item-price clearfix">
+									<i>¥</i><span>199.00</span>
+								</div>
+								<div class="discount-icon">false</div>
+								<div class="item-cover">
+									<a href="javascript:;" target="_blank"></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div>
+								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="http://image.smartisanos.cn/resource/ae40a16324658c192c7361d829f603bd.jpg?x-oss-process=image/resize,w_206/quality,Q_80/format,webp" style="opacity: 1;">
+								</div>
+								<h6>Smartisan 快充移动电源 10000mAh</h6>
+								<h3 >10000mAh 双向快充、轻盈便携、高标准安全保护</h3>
+								<div class="params-colors">
+									<ul class="colors-list">
+										<li><a href="javascript:;" class="active"><img src="http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg"></a></li>
+									</ul>
+								</div>
+								<div class="item-btns clearfix">
+									<span class="item-gray-btn"><a href="javascript:;" target="_blank">查看详情</a> </span><span class="item-blue-btn">加入购物车 </span>
+								</div>
+								<div class="item-price clearfix">
+									<i>¥</i><span>199.00</span>
+								</div>
+								<div class="discount-icon">false</div>
+								<div class="item-cover">
+									<a href="javascript:;" target="_blank"></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div>
+								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="http://image.smartisanos.cn/resource/ae40a16324658c192c7361d829f603bd.jpg?x-oss-process=image/resize,w_206/quality,Q_80/format,webp" style="opacity: 1;">
+								</div>
+								<h6>Smartisan 快充移动电源 10000mAh</h6>
+								<h3 >10000mAh 双向快充、轻盈便携、高标准安全保护</h3>
+								<div class="params-colors">
+									<ul class="colors-list">
+										<li><a href="javascript:;" class="active"><img src="http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg"></a></li>
+									</ul>
+								</div>
+								<div class="item-btns clearfix">
+									<span class="item-gray-btn"><a href="javascript:;" target="_blank">查看详情</a> </span><span class="item-blue-btn">加入购物车 </span>
+								</div>
+								<div class="item-price clearfix">
+									<i>¥</i><span>199.00</span>
+								</div>
+								<div class="discount-icon">false</div>
+								<div class="item-cover">
+									<a href="javascript:;" target="_blank"></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div>
+								<div class="item-img"><img alt="Smartisan 快充移动电源 10000mAh" src="http://image.smartisanos.cn/resource/ae40a16324658c192c7361d829f603bd.jpg?x-oss-process=image/resize,w_206/quality,Q_80/format,webp" style="opacity: 1;">
+								</div>
+								<h6>Smartisan 快充移动电源 10000mAh</h6>
+								<h3 >10000mAh 双向快充、轻盈便携、高标准安全保护</h3>
+								<div class="params-colors">
+									<ul class="colors-list">
+										<li><a href="javascript:;" class="active"><img src="http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg"></a></li>
+									</ul>
+								</div>
+								<div class="item-btns clearfix">
+									<span class="item-gray-btn"><a href="javascript:;" target="_blank">查看详情</a> </span><span class="item-blue-btn">加入购物车 </span>
+								</div>
+								<div class="item-price clearfix">
+									<i>¥</i><span>199.00</span>
+								</div>
+								<div class="discount-icon">false</div>
+								<div class="item-cover">
+									<a href="javascript:;" target="_blank"></a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
