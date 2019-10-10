@@ -28,6 +28,7 @@
 						</li>
 						<!--active-->
 						<carPanel></carPanel>
+						
 					</ul>
 					<ul class="nav-list">
 						<li><a href="javascript:;">在线商城</a></li>
@@ -60,5 +61,12 @@
 	</div>
 </template>
 <script>
+import carPanel from './car-panel'
+export default{
+	components:{
+		carPanel
+	}
+
+}
 
 </script>

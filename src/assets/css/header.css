@@ -22,7 +22,7 @@
   display: inline-block;
   width: 60px;
   height: 60px;
-  /* background: url(../img/banana-logo.png) no-repeat; */
+  background: url(../img/global-logo.png) no-repeat;
   background-size: cover;
 }
 
