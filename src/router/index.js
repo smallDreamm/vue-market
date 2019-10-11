@@ -7,6 +7,7 @@ Vue.use(Router)
 
 import Shop from '../views/shop'
 
+
 export default new Router({
   routes: [
     {path:'/',component:Shop}
