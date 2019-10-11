@@ -1,11 +1,11 @@
 <template>
-<li class="nav-cart">
+<li class="nav-cart" @mouseenter="showCarHandle" @mouseleave="hideCarHandle">
     <a href="javascript:;">购物车</a>
-    
-    <span class="cart-empty-num cart-num">
-        <i>0</i>
+    <!-- 当购物车count>0,动态引入样式 -->
+    <span class="cart-empty-num " :class="{'cart-num' :count>0}">
+        <i>{{count}}</i>
     </span>
-    <div class="nav-cart-wrapper">
+    <div class="nav-cart-wrapper" v-if="carShow">
         <div class="nav-cart-list">
             <div class="empty" v-if="count<=0">
                 <h3>购物车为空</h3>
@@ -34,7 +34,7 @@
                                             </h6>
                                         </div>
                                     </div>
-                                    <div class="del-btn">删除</div>
+                                    <div class="del-btn" @click="delCarpanelData(item.sku_id)">删除</div>
                                 </div>
                             </div>
                         </li>
@@ -65,6 +65,26 @@ export default {
 		},
         totle(){
             return this.$store.getters.totlePrice
+        },
+        carShow(){
+            return this.$store.state.carShow
+        }
+    },
+    methods:{
+        //删除购物车的单类商品
+        delCarpanelData(id){
+            this.$store.commit('delCarpanelData',id)
+        },
+        //显示购物车
+        showCarHandle () {
+		    clearTimeout(this.iTimer)
+		    this.$store.commit('showCar')
+          },
+        //隐藏购物车
+        hideCarHandle () {
+            this.iTimer = setTimeout(()=>{
+                this.$store.commit('hideCar')
+            },300)
         }
     }
 }

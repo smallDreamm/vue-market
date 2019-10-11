@@ -5,7 +5,12 @@ Vue.use(Vuex)
 
 let store=new Vuex.Store({
     state:{
-        carPanelData:[]
+        // 存放数据
+        carPanelData:[],
+        // 是否为最大值
+        maxOff:false,
+        //控制购物车隐藏显示
+        carShow:false
     },
     getters:{
         //购物车计算数量
@@ -13,6 +18,10 @@ let store=new Vuex.Store({
             let count=0
             state.carPanelData.forEach(goods=>{
               count+=goods.count
+              if(goods.count>goods.limit_num){
+                  goods.count--
+                  state.maxOff=true
+              }
             })
               return count
         },
@@ -34,14 +43,35 @@ let store=new Vuex.Store({
                 if(goods.sku_id===data.sku_id){
                     goods.count++
                     bOff=false
+                    state.carShow=true
                 }
             })
             if(bOff){
                 let goodsData=data
                 Vue.set(goodsData,'count',1)
                 state.carPanelData.push(goodsData)
+                state.carShow=true
             }
-            console.log(state.carPanelData)
+        },
+        //删除购物车中商品
+        delCarpanelData(state,id){
+            state.carPanelData.forEach((goods,index) => {
+                if(goods.sku_id===id){
+                    state.carPanelData.splice(index,1)
+                    return
+                }                
+            })
+        },
+        closePrompt(state){
+            state.maxOff=false
+        },
+        //移入显示购物车
+        showCar(state){
+            state.carShow=true
+        },
+        //移出隐藏购物车
+        hideCar(state){
+            state.carShow=false
         }
 
     }

@@ -1,47 +1,30 @@
 <template>
-<div id="main">
-		
-			<div class="sku-box store-content ">
-				
-				<div class="sort-option">
-					<ul class="line clear">
-						<li><a href="javascript:;" class="active">综合排序</a></li>
-						<li><a href="javascript:;" class="">销量排序</a></li>
-						<li><a href="javascript:;" class="">价格低到高</a></li>
-						<li><a href="javascript:;" class="">价格高到低</a></li>
-					</ul>
-				</div>
-				<!--轮播图-->
-				<div class="carousel-wrap" id="carousel">
-				    <transition-group tag="ul" class='slide-ul' name="list">
-				        <li v-for="(list,index) in slideList" :key="index" v-show="index===currentIndex" @mouseenter="stop" @mouseleave="go">
-				            <a :href="list.clickUrl" >
-				                <img :src="list.image" :alt="list.desc">
-				            </a>
-				        </li>
-				    </transition-group>
-				    <div class="carousel-items">
-				        <!-- <span v-for="(item,index) in slideList.length" :class="{'active':index===currentIndex}" @mouseover="change(index)"></span> -->
-				    </div>
-				</div>
-				<!--手机配件-->
-				<div class="gray-box">
-					<!-- <header class="title-header">
-						<h5 class="title">热门商品</h5>
-					</header> -->
-					<div class="item-box">
-                        <shopItem :key="index" v-for="(item,index) in goodsData" :item="item"></shopItem>
-						
-						
-					</div>
-				</div>
-			</div>
-		</div>
+<div id="main">		
+    <div class="sku-box store-content ">       
+        <div class="sort-option">
+            <ul class="line clear">
+                <li><a href="javascript:;" class="active">综合排序</a></li>
+                <li><a href="javascript:;" class="">销量排序</a></li>
+                <li><a href="javascript:;" class="">价格低到高</a></li>
+                <li><a href="javascript:;" class="">价格高到低</a></li>
+            </ul>
+        </div>
+        <!--手机配件-->
+        <div class="gray-box">
+            <div class="item-box">
+                <shopItem :key="index" v-for="(item,index) in goodsData" :item="item"></shopItem>						
+            </div>
+        </div>
+    </div>
+    <prompt></prompt>
+</div>
     
 </template>
 <script>
 import goodsData from '../lib/newGoodsData.js'
 import shopItem from '../components/shop-item'
+import prompt from '../components/prompt'
+
 export default{
 	data(){
 		return {
@@ -49,7 +32,8 @@ export default{
 		}
     },
     components:{
-        shopItem
+        shopItem,
+        prompt
     }
 }
 
