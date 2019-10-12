@@ -10,7 +10,12 @@ let store=new Vuex.Store({
         // 是否为最大值
         maxOff:false,
         //控制购物车隐藏显示
-        carShow:false
+        carShow:false,
+        ball:{
+            show:false,//显示
+            el:null,//哪一个
+            img:''
+        }
     },
     getters:{
         //购物车计算数量
@@ -42,15 +47,29 @@ let store=new Vuex.Store({
             state.carPanelData.forEach(goods=>{
                 if(goods.sku_id===data.sku_id){
                     goods.count++
+                    if(goods.count>goods.limit_num){
+                        goods.count=goods.limit_num
+                        state.maxOff=true
+                        bOff=false
+                        return
+                    }
                     bOff=false
+                    //添加商品进购物车则显示购物车
                     state.carShow=true
+                    state.ball.show=true
+                    state.ball.img=data.ali_image
+                    state.ball.el=event.path[0]
                 }
+
             })
             if(bOff){
                 let goodsData=data
                 Vue.set(goodsData,'count',1)
                 state.carPanelData.push(goodsData)
                 state.carShow=true
+                state.ball.show=true
+                state.ball.img=data.ali_image
+                state.ball.el=event.path[0]
             }
         },
         //删除购物车中商品

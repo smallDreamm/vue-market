@@ -1,6 +1,6 @@
 <template>
 <li class="nav-cart" @mouseenter="showCarHandle" @mouseleave="hideCarHandle">
-    <a href="javascript:;">购物车</a>
+    <a href="javascript:;" class="ball-rect">购物车</a>
     <!-- 当购物车count>0,动态引入样式 -->
     <span class="cart-empty-num " :class="{'cart-num' :count>0}">
         <i>{{count}}</i>
@@ -50,6 +50,12 @@
             </div>
         </div>
     </div>
+    <transition name="ball"
+    v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:after-enter="afterEnter" v-bind:css="true">
+        <div class="addcart-mask" v-show="ball.show">
+            <img src="" alt="" class="mask-item">
+        </div>
+    </transition>
 </li> 
     
 </template>
@@ -68,6 +74,9 @@ export default {
         },
         carShow(){
             return this.$store.state.carShow
+        },
+        ball(){
+            return this.$store.state.ball
         }
     },
     methods:{
@@ -85,7 +94,48 @@ export default {
             this.iTimer = setTimeout(()=>{
                 this.$store.commit('hideCar')
             },300)
+        },
+        //初始状态
+        beforeEnter(el){
+            //小球的位置
+            let rect=this.ball.el.getBoundingClientRect()
+            //购物车的位置
+            let rectEl=document.getElementsByClassName('ball-rect')[0].getBoundingClientRect()
+            //当前小球
+            let ball=document.getElementsByClassName('mask-item')[0]
+            //计算
+            let x=(rectEl.left+16)-(rect.left+rect.width/2)
+            let y=rect.top+rect.height/2-rectEl.top+5-16
+
+            el.style.transform = 'translate3d(0,'+y+'px,0)'
+            ball.style.transform = 'translate3d(-'+x+'px,0,0)'
+            ball.src = this.ball.img
+
+
+        },
+        //运动状态
+        enter(el){
+            //重排重绘
+            let rf = el.offsetHeight
+            this.$nextTick(() => {
+            el.style.transform = 'translate3d(0,0,0)'
+            document.getElementsByClassName('mask-item')[0].style.transform = 'translate3d(0,0,0)'
+        })
+
+        },
+        afterEnter(el){
+            this.ball.show = false
+
         }
     }
 }
 </script>
+
+<style>
+.ball-enter-active{
+    transition: 0.5s cubic-bezier(.15,.69,.6,1.29)     /* 贝塞尔曲线 */
+}
+.ball-enter-active .mask-item{
+    transition: 0.5s cubic-bezier(0,0,1,1)
+}
+</style>
