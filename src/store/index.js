@@ -12,7 +12,7 @@ let store=new Vuex.Store({
         //控制购物车隐藏显示
         carShow:false,
         ball:{
-            show:false,//显示
+            show:false,//显示或隐藏
             el:null,//哪一个
             img:''
         }
@@ -53,9 +53,8 @@ let store=new Vuex.Store({
                         bOff=false
                         return
                     }
-                    bOff=false
-                    //添加商品进购物车则显示购物车
-                    state.carShow=true
+                    bOff=false                   
+                    state.carShow=true //添加商品进购物车则显示购物车
                     state.ball.show=true
                     state.ball.img=data.ali_image
                     state.ball.el=event.path[0]
